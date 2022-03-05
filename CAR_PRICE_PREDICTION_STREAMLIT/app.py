@@ -3,9 +3,9 @@ import pandas as pd
 import joblib
 st.title("USEDCAR PRICE PREDICTION PAGE")
 st.image("https://miro.medium.com/max/647/1*ZOcUPrSXLYucFxppoI-dYg.png")
-scaler = joblib.load(open("scaler2.joblib","rb"))
-model = joblib.load(open("xgb_model2.joblib","rb"))
-columns = joblib.load("columns2.joblib")
+scaler = joblib.load(open("scaler.joblib","rb"))
+model = joblib.load(open("xgb_model.joblib","rb"))
+columns = joblib.load("columns.joblib")
 
 st.sidebar.title('Configure Your Car')
 Year = st.sidebar.number_input("Year", min_value =2000, max_value = 2018, value=2014)
